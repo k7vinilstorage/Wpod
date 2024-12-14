@@ -8,6 +8,7 @@
 class IpodDisplay {
     public:
         int sd_state = 0;
+        int selected_menu = 0;
 
         IpodDisplay(U8G2_SSD1306_128X64_NONAME_F_HW_I2C &display);
         void setupDisplay();

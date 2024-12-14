@@ -5,6 +5,7 @@ IpodDisplay::IpodDisplay(U8G2_SSD1306_128X64_NONAME_F_HW_I2C &display) {
     u8g2 = &display;
 }
 
+
 void IpodDisplay::setupDisplay() {
     u8g2->begin();
     u8g2->clearBuffer();
@@ -12,9 +13,27 @@ void IpodDisplay::setupDisplay() {
     u8g2->setBitmapMode(1);
     u8g2->drawXBMP(1, 0, 127, 64, ipod_w);
     u8g2->sendBuffer();
+    delay(1000);
+    MainMenuDraw(0);
 }
 
 void IpodDisplay::ChangeMenu() {
+    switch(main_menu_pos) {
+        case 0:
+            selected_menu = 1;
+            break;
+        case 1:
+            selected_menu = 2;
+            break;
+        case 2:
+            selected_menu = 3;
+            break;
+        case 3:
+            selected_menu = 3;
+            break;
+        default:
+            break;
+    }
 }
 
 void IpodDisplay::StateDrawSD() {
