@@ -8,8 +8,9 @@ IpodDisplay display(u8g2);
 
 void setup() {
     display.setupDisplay();
+    display.MainMenu('z');
 }
 
 void loop() {
-
+    
 }
