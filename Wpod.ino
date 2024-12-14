@@ -9,9 +9,8 @@ IpodInput input;
 
 void setup() {
     display.setupDisplay();
-    display.MainMenu('z');
 }
 
 void loop() {
-    
+    display.MainMenu(input.DetectInput());
 }
