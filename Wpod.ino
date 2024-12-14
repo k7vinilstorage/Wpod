@@ -12,5 +12,16 @@ void setup() {
 }
 
 void loop() {
-    display.MainMenu(input.DetectInput());
+    switch(display.selected_menu) {
+        case 0:
+            display.MainMenu(input.DetectInput());
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+    }
+    
 }

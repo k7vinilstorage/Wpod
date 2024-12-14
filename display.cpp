@@ -18,6 +18,22 @@ void IpodDisplay::setupDisplay() {
 }
 
 void IpodDisplay::ChangeMenu() {
+    switch(main_menu_pos) {
+        case 0:
+            selected_menu = 1;
+            break;
+        case 1:
+            selected_menu = 2;
+            break;
+        case 2:
+            selected_menu = 3;
+            break;
+        case 3:
+            selected_menu = 3;
+            break;
+        default:
+            break;
+    }
 }
 
 void IpodDisplay::StateDrawSD() {
